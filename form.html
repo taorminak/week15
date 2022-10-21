@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="/assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+  </head>
+  <body>
+    <div class="form">
+      <div class="form__container">
+        <div class="container_colored">
+          <form class="container">
+            <span class="container__logo">
+              <i class="fa fa-user" aria-hidden="true"></i>
+            </span>
+
+            <span class="container__title"> Sign up </span>
+
+            <div class="container__input_user">
+              <div class="container__icon">
+                <i class="fa fa-user" aria-hidden="true"></i>
+              </div>
+              <input
+                class="input-text"
+                type="text"
+                id="name"
+                name="full-name"
+                placeholder="Full Name"
+              />
+            </div>
+
+            <div class="container__input_user">
+              <div class="container__icon">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+              </div>
+              <input
+                class="input-text"
+                type="text"
+                name="e-mail"
+                placeholder="E-mail"
+              />
+            </div>
+
+            <div class="container__input_user">
+              <div class="container__icon">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+              </div>
+              <input
+                class="input-text"
+                type="password"
+                name="pass"
+                placeholder="Password"
+              />
+            </div>
+
+            <div class="container__input_user">
+              <div class="container__icon">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+              </div>
+              <input
+                class="input-text"
+                type="password"
+                name="pass"
+                placeholder="Repeat password"
+              />
+            </div>
+
+            <div class="container__input_user">
+              <div class="container__icon">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+              </div>
+              <input
+                class="input-text"
+                type="text"
+                name="phone"
+                placeholder="Phone"
+              />
+            </div>
+
+            <div class="form__checkbox">
+              <input
+                class="checkbox__input"
+                id="ckb1"
+                type="checkbox"
+                name="remember-me"
+              />
+              <label class="checkbox-label" for="ckb1"> Remember me </label>
+            </div>
+            <div id="message"></div>
+            <div class="container__login">
+              <button class="container__button" onclick="myFunction()">
+                Sign up
+              </button>
+            </div>
+
+            <div class="container__text">
+              <a class="txt1" href="#">
+                Already a member? <span>Log in</span>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function myFunction() {
+        let name = document.getElementById("name");
+
+        if (name.value == "") {
+          document.getElementById("message").innerHTML +=
+            "You need to provide your name";
+        }
+      }
+    </script>
+  </body>
+</html>
