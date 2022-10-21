@@ -42,6 +42,7 @@
               <input
                 class="input-text"
                 type="text"
+                id="e-mail"
                 name="e-mail"
                 placeholder="E-mail"
               />
@@ -54,6 +55,7 @@
               <input
                 class="input-text"
                 type="password"
+                id="password"
                 name="pass"
                 placeholder="Password"
               />
@@ -66,6 +68,7 @@
               <input
                 class="input-text"
                 type="password"
+                id="confirm-pass"
                 name="pass"
                 placeholder="Repeat password"
               />
@@ -78,6 +81,7 @@
               <input
                 class="input-text"
                 type="text"
+                id="phone"
                 name="phone"
                 placeholder="Phone"
               />
@@ -94,7 +98,7 @@
             </div>
             <div id="message"></div>
             <div class="container__login">
-              <button class="container__button" onclick="myFunction()">
+              <button class="container__button" onclick="myFunction(event)">
                 Sign up
               </button>
             </div>
@@ -110,12 +114,40 @@
     </div>
 
     <script>
-      function myFunction() {
-        let name = document.getElementById("name");
+      function myFunction(e) {
+        e.preventDefault();
+
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("e-mail");
+        let password = document.getElementById("password");
+        let confirmPass = document.getElementById("confirm-pass");
+        let phone = document.getElementById("phone");
+
+        document.getElementById("message").innerHTML = "";
 
         if (name.value == "") {
           document.getElementById("message").innerHTML +=
-            "You need to provide your name";
+            "You need to provide your name<br>";
+        }
+        if (email.value == "") {
+          document.getElementById("message").innerHTML +=
+            "You need to provide your email<br>";
+        }
+        if (password.value == "") {
+          document.getElementById("message").innerHTML +=
+            "You need to provide your password<br>";
+        }
+        if (confirmPass.value == "") {
+          document.getElementById("message").innerHTML +=
+            "You need to repeat your password<br>";
+        }
+        if (phone.value == "") {
+          document.getElementById("message").innerHTML +=
+            "You need to provide your phone<br>";
+        } else {
+          let greeting = "Hello, " + name + "!";
+          document.getElementById("message").innerHTML = greeting;
+          document.getElementById("message").style.color = "white";
         }
       }
     </script>
