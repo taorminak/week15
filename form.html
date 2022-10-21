@@ -117,7 +117,7 @@
       function myFunction(e) {
         e.preventDefault();
 
-        let name = document.getElementById("name").value;
+        let name = document.getElementById("name");
         let email = document.getElementById("e-mail");
         let password = document.getElementById("password");
         let confirmPass = document.getElementById("confirm-pass");
@@ -145,6 +145,7 @@
           document.getElementById("message").innerHTML +=
             "You need to provide your phone<br>";
         } else {
+          let name = document.getElementById("name").value;
           let greeting = "Hello, " + name + "!";
           document.getElementById("message").innerHTML = greeting;
           document.getElementById("message").style.color = "white";
