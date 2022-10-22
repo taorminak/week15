@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select id="background" onchange="changeBodyBg()">
+      <option>Выберите тему</option>
+      <option value="blue">Синяя</option>
+      <option value="green">Зелёная</option>
+      <option value="red">Красная</option>
+      <option value="yellow">Жёлтая</option>
+    </select>
+
+    <script>
+      function changeBodyBg() {
+        let val = document.getElementById("background").value;
+
+        if (val == "blue") {
+          document.body.style.backgroundColor = "blue";
+        } else if (val == "green") {
+          document.body.style.backgroundColor = "green";
+        } else if (val == "red") {
+          document.body.style.backgroundColor = "red";
+        } else if (val == "yellow") {
+          document.body.style.backgroundColor = "yellow";
+        }
+      }
+    </script>
+  </body>
+</html>
